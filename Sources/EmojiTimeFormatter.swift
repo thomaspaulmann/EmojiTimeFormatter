@@ -56,7 +56,7 @@ public class EmojiTimeFormatter: Formatter {
     // MARK: - Private
 
     private func string(for time: Double) -> ClockFaceEmoji {
-        let limitedTime = limit(time: time)
+        let limitedTime = limit(time)
 
         if limitedTime < 1.25 {
             return ClockFaceEmoji.twelve
@@ -166,7 +166,7 @@ public class EmojiTimeFormatter: Formatter {
         }
     }
 
-    private func limit(time: Double) -> Double {
+    private func limit(_ time: Double) -> Double {
         if time < 1 {
             // Midnight
             return time + 12
