@@ -1,5 +1,6 @@
 import PackageDescription
 
 let package = Package(
-    name: "EmojiTimeFormatter"
+    name: "EmojiTimeFormatter",
+    exclude: ["EmojiTimeFormatter.xcodeproj", "Tests"]
 )
