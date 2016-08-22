@@ -157,6 +157,7 @@
 					BE35FC151D6A41BE0057F5D3 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = E6HN743D3A;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
