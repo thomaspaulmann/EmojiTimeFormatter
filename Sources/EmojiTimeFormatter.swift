@@ -12,7 +12,7 @@ open class EmojiTimeFormatter: Formatter {
 
     // MARK: - Properties
 
-    fileprivate let calendar = Calendar.current
+    fileprivate let calendar = Calendar.autoupdatingCurrent
 
     // MARK: - Formatter
 
