@@ -28,7 +28,7 @@ class EmojiTimeFormatterTests: XCTestCase {
 
     // MARK: - Output
 
-    func testTwentyFourSeven() {
+    func testTwentyFourHours() {
         var minutes = Date(timeIntervalSince1970: 0)
 
         // 1 AM
@@ -385,37 +385,43 @@ class EmojiTimeFormatterTests: XCTestCase {
             XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.tenThirty.rawValue,
                       "Emoji is not correct for \(minutes)")
         }
-
+        
         // 11 PM
-
+        
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
-
+            
             XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.eleven.rawValue,
                       "Emoji is not correct for \(minutes)")
         }
-
+        
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
-
+            
             XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.elevenThirty.rawValue,
                       "Emoji is not correct for \(minutes)")
         }
-
+        
         // 12 AM
-
+        
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
-
+            
             XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelve.rawValue,
                       "Emoji is not correct for \(minutes)")
         }
-
+        
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
-
+            
             XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelveThirty.rawValue,
                       "Emoji is not correct for \(minutes)")
+        }
+    }
+
+    func testTwentyFourSeven() {
+        for _ in 0..<7 {
+            testTwentyFourHours()
         }
     }
     

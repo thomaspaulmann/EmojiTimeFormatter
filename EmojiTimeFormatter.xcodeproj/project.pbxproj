@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BE35FC171D6A41BE0057F5D3 /* EmojiTimeFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE35FC0D1D6A41BE0057F5D3 /* EmojiTimeFormatter.framework */; };
 		BE35FC1C1D6A41BE0057F5D3 /* EmojiTimeFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35FC1B1D6A41BE0057F5D3 /* EmojiTimeFormatterTests.swift */; };
-		BE35FC1E1D6A41BE0057F5D3 /* EmojiTimeFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = BE35FC101D6A41BE0057F5D3 /* EmojiTimeFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE35FC281D6A41D90057F5D3 /* EmojiTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35FC271D6A41D90057F5D3 /* EmojiTimeFormatter.swift */; };
 		BE35FC2C1D6A46A40057F5D3 /* ClockFaceEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35FC2B1D6A46A40057F5D3 /* ClockFaceEmoji.swift */; };
 /* End PBXBuildFile section */
@@ -26,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		BE35FC0D1D6A41BE0057F5D3 /* EmojiTimeFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmojiTimeFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE35FC101D6A41BE0057F5D3 /* EmojiTimeFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiTimeFormatter.h; sourceTree = "<group>"; };
 		BE35FC111D6A41BE0057F5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE35FC161D6A41BE0057F5D3 /* EmojiTimeFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiTimeFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE35FC1B1D6A41BE0057F5D3 /* EmojiTimeFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTimeFormatterTests.swift; sourceTree = "<group>"; };
@@ -57,8 +55,8 @@
 		BE35FC031D6A41BE0057F5D3 = {
 			isa = PBXGroup;
 			children = (
-				BE35FC0F1D6A41BE0057F5D3 /* EmojiTimeFormatter */,
-				BE35FC1A1D6A41BE0057F5D3 /* EmojiTimeFormatterTests */,
+				BE35FC0F1D6A41BE0057F5D3 /* Sources */,
+				BE35FC1A1D6A41BE0057F5D3 /* Tests */,
 				BE35FC0E1D6A41BE0057F5D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,24 +70,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE35FC0F1D6A41BE0057F5D3 /* EmojiTimeFormatter */ = {
+		BE35FC0F1D6A41BE0057F5D3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BE35FC101D6A41BE0057F5D3 /* EmojiTimeFormatter.h */,
-				BE35FC111D6A41BE0057F5D3 /* Info.plist */,
 				BE35FC271D6A41D90057F5D3 /* EmojiTimeFormatter.swift */,
 				BE35FC2B1D6A46A40057F5D3 /* ClockFaceEmoji.swift */,
+				BE35FC111D6A41BE0057F5D3 /* Info.plist */,
 			);
-			path = EmojiTimeFormatter;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		BE35FC1A1D6A41BE0057F5D3 /* EmojiTimeFormatterTests */ = {
+		BE35FC1A1D6A41BE0057F5D3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				BE35FC1B1D6A41BE0057F5D3 /* EmojiTimeFormatterTests.swift */,
 				BE35FC1D1D6A41BE0057F5D3 /* Info.plist */,
 			);
-			path = EmojiTimeFormatterTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +96,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE35FC1E1D6A41BE0057F5D3 /* EmojiTimeFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +334,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EmojiTimeFormatter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerofemojis.EmojiTimeFormatter;
@@ -359,7 +355,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EmojiTimeFormatter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerofemojis.EmojiTimeFormatter;
@@ -373,7 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = E6HN743D3A;
-				INFOPLIST_FILE = EmojiTimeFormatterTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerofemojis.EmojiTimeFormatterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,7 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = E6HN743D3A;
-				INFOPLIST_FILE = EmojiTimeFormatterTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerofemojis.EmojiTimeFormatterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
