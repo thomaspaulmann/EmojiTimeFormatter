@@ -31,6 +31,7 @@
 		BE35FC1D1D6A41BE0057F5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE35FC271D6A41D90057F5D3 /* EmojiTimeFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTimeFormatter.swift; sourceTree = "<group>"; };
 		BE35FC2B1D6A46A40057F5D3 /* ClockFaceEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFaceEmoji.swift; sourceTree = "<group>"; };
+		BE398A101D6B0E5700072FB2 /* EmojiTimeFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiTimeFormatter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 			children = (
 				BE35FC271D6A41D90057F5D3 /* EmojiTimeFormatter.swift */,
 				BE35FC2B1D6A46A40057F5D3 /* ClockFaceEmoji.swift */,
+				BE398A101D6B0E5700072FB2 /* EmojiTimeFormatter.h */,
 				BE35FC111D6A41BE0057F5D3 /* Info.plist */,
 			);
 			path = Sources;
@@ -273,6 +275,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -318,6 +321,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
