@@ -4,13 +4,11 @@ Format your dates/times as emojis 🕟 🕑 🕗
 
 ## Installation
 
-EmojiTimeFormatter supports multiple methods for installing the library in a project.
+EmojiTimeFormatter supports multiple methods for installing the library in a project. You can find the latest version in the [release tab](https://github.com/thomaspaulmann/EmojiTimeFormatter/releases/latest).
 
 ### Installation with Swift Package Manager 
 
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
-
-To integrate EmojiTimeFormatter into your project using Swift Packager Manager, specify it in your `Package.swift` file:
+To integrate EmojiTimeFormatter into your project using [Swift Package Manager](https://swift.org/package-manager/), specify it in your `Package.swift` file:
 
 ``` Swift
 import PackageDescription
@@ -18,10 +16,20 @@ import PackageDescription
 let package = Package(
     [...]
     dependencies: [
-        .Package(url: "https://github.com/thomaspaulmann/EmojiTimeFormatter.git", majorVersion: 1)
+        .Package(url: "https://github.com/thomaspaulmann/EmojiTimeFormatter.git", majorVersion: XYZ)
     ]
 )
 ```
+
+### Installation with Carthage
+
+To integrate EmojiTimeFormatter into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your `Cartfile`:
+
+```
+github "thomaspaulmann/EmojiTimeFormatter" ~> X.Y.Z
+```
+
+Run carthage to build the framework and drag the built EmojiTimeFormatter.framework into your Xcode project.
 
 ## Usage
 
