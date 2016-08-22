@@ -16,12 +16,29 @@ class EmojiTimeFormatterTests: XCTestCase {
 
     let formatter = EmojiTimeFormatter()
 
+    // MARK: - Example
+
+    func testExampleDateToEmoji() {
+        let now = Date()
+        let formatter = EmojiTimeFormatter()
+        let clockFaceEmoji = formatter.clockFace(from: now)
+
+        print("It's \(clockFaceEmoji) o'clock.")
+    }
+
+    func testExampleEmojiToDate() {
+        let twelveThirty = ClockFaceEmoji.twelveThirty
+        let formatter = EmojiTimeFormatter()
+        let date = formatter.date(from: twelveThirty)
+
+        print("It's \(date).")
+    }
+
     // MARK: - Input
 
     func testInvalidObjects() {
         XCTAssert(formatter.string(for: Calendar.current) == nil)
         XCTAssert(formatter.getObjectValue(nil, for: "Whatever you want", errorDescription: nil) == false)
-        
     }
 
     func testValidObjects() {
