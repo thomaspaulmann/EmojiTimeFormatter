@@ -41,7 +41,7 @@ print("It's \(clockFaceEmoji) o'clock.")
 
 ### Emoji to Date
 
-It's also possible to get convert a `ClockFaceEmoji` back to a `Date`. Create a new `EmojiTimeFormatter`, get the `Date` for your `ClockFaceEmoji` and print it. It's that simple.
+It's also possible to convert a `ClockFaceEmoji` back to a `Date`. Create a new `EmojiTimeFormatter`, get the `Date` for your `ClockFaceEmoji` and print it. It's that simple, again.
 
 ``` Swift
 let twelveThirty = ClockFaceEmoji.twelveThirty
