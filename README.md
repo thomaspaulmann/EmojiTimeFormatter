@@ -51,7 +51,7 @@ let date = formatter.date(from: twelveThirty)
 print("It's \(date).")
 ```
 
-Note: Actually it's not a date, it's a time relative to to 00:00:00 UTC on 1 January 1970.
+Note: Actually it's not a date, it's a time relative to 00:00:00 UTC on 1 January 1970.
 
 ## License
 
