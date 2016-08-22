@@ -2,10 +2,17 @@
 
 Format your dates/times as emojis 🕟 🕑 🕗
 
+## Description
+
+You can build easy to understand user interfaces with EmojiTimeFormatter or can do funny things like that:
+
+![Screencast](https://raw.githubusercontent.com/PowerOfEmojis/EmojiClock/master/Screencasts/emojiclock-300px.gif)
+
+The exampel is accessable via [Power of Emojis](https://github.com/PowerOfEmojis/EmojiClock).
+
 ## Installation
 
-EmojiTimeFormatter supports multiple methods for installing the library in a project. You can find the latest version in the [release tab](https://github.com/thomaspaulmann/EmojiTimeFormatter/releases/latest). Furthermore you can find an example project at [Power of Emojis](https://github.com/PowerOfEmojis/EmojiClock).
-
+EmojiTimeFormatter supports multiple methods for installing the library in a project. You can find the latest version in the [release tab](https://github.com/thomaspaulmann/EmojiTimeFormatter/releases/latest). 
 
 **There are some troubles with distributing frameworks that are written in Swift 2.3/3.0. The easiest way to use EmojiTimeFormatter is copying the [Sources](/Sources) to your project.**
 
