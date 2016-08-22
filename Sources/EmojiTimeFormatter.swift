@@ -22,9 +22,24 @@ public class EmojiTimeFormatter: Formatter {
             return nil
         }
 
-
         return string(from: date)
     }
+
+    public override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?,
+                                        for string: String,
+                                        errorDescription error: AutoreleasingUnsafeMutablePointer<NSString?>?) -> Bool {
+        // If argument is not a clock face emoji, set error message and return false.
+        guard let clockFaceEmoji = ClockFaceEmoji(rawValue: string) else {
+            error?.pointee = "Argument is not a valid clock face emoji."
+            return false
+        }
+
+        obj?.pointee = date(for: clockFaceEmoji)
+
+        return true
+    }
+
+    // MARK: - Typesafety first
 
     public func string(from date: Date) -> String {
         // Extract hours and minutes.
@@ -32,6 +47,10 @@ public class EmojiTimeFormatter: Formatter {
         let minutes = Double(calendar.component(.minute, from: date)) / 60.0
 
         return string(for: hours + minutes)
+    }
+
+    public func date(from emoji: ClockFaceEmoji) -> Date {
+        return date(for: emoji)
     }
 
     // MARK: - Private
