@@ -4,7 +4,8 @@ Format your dates/times as emojis 🕟 🕑 🕗
 
 ## Installation
 
-EmojiTimeFormatter supports multiple methods for installing the library in a project. You can find the latest version in the [release tab](https://github.com/thomaspaulmann/EmojiTimeFormatter/releases/latest).
+EmojiTimeFormatter supports multiple methods for installing the library in a project. You can find the latest version in the [release tab](https://github.com/thomaspaulmann/EmojiTimeFormatter/releases/latest). Furthermore you can find an example project at [Power of Emojis](https://github.com/PowerOfEmojis/EmojiClock).
+
 
 **There are some troubles with distributing frameworks that are written in Swift 2.3/3.0. The easiest way to use EmojiTimeFormatter is copying the [Sources](/Sources) to your project.**
 
