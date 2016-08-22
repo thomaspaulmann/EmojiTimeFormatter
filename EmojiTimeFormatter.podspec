@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EmojiTimeFormatter"
-  s.version          = "1.0.0"
+  s.version          = "0.1.0"
   s.summary          = "Format your dates/times as emojis."
   s.description      = <<-DESC
                        EmojiTimeFormatter is a Swift Library, which enables to format date/times to clock watch emojis. 🕐 🕛 🕦 🕚 🕒 🕑 🕔
