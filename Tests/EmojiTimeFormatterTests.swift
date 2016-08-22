@@ -18,12 +18,15 @@ class EmojiTimeFormatterTests: XCTestCase {
 
     // MARK: - Input
 
-    func testInvalidObject() {
+    func testInvalidObjects() {
         XCTAssert(formatter.string(for: Calendar.current) == nil)
+        XCTAssert(formatter.getObjectValue(nil, for: "Whatever you want", errorDescription: nil) == false)
+        
     }
 
-    func testValidObject() {
+    func testValidObjects() {
         XCTAssert(formatter.string(for: Date()) != nil)
+        XCTAssert(formatter.getObjectValue(nil, for: ClockFaceEmoji.twelve.rawValue, errorDescription: nil) == true)
     }
 
     // MARK: - Date to Emoji
@@ -440,7 +443,7 @@ class EmojiTimeFormatterTests: XCTestCase {
     func testEmojis() {
         XCTAssert(formatter.date(from: .twelve) == Date(timeIntervalSince1970: 0))
         XCTAssert(formatter.date(from: .twelveThirty) == Date(timeIntervalSince1970: 1800))
-        
+
         // ...
     }
 
