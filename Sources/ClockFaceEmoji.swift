@@ -39,3 +39,16 @@ public enum ClockFaceEmoji: String {
     case twelveThirty = "🕧"
 
 }
+
+// MARK: - Custom String Convertible
+
+extension ClockFaceEmoji: CustomStringConvertible {
+
+    public var description: String {
+        return self.rawValue
+    }
+
+}
+
+
+
