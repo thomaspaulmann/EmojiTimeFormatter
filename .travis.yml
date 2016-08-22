@@ -1,0 +1,11 @@
+language: objective-c
+osx_image: xcode8
+xcode_project: EmojiTimeFormatter.xcodeproj
+xcode_scheme: EmojiTimeFormatter
+xcode_sdk: iphonesimulator10.0
+
+script:
+        - xcodebuild -project EmojiTimeFormatter.xcodeproj -scheme EmojiTimeFormatter -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' clean test
+
+notifications:
+          email: false
