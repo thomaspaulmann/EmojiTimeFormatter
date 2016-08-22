@@ -8,7 +8,7 @@ You can build easy to understand user interfaces with EmojiTimeFormatter or can 
 
 ![Screencast](https://raw.githubusercontent.com/PowerOfEmojis/EmojiClock/master/Screencasts/emojiclock-300px.gif)
 
-The exampel is accessable via [Power of Emojis](https://github.com/PowerOfEmojis/EmojiClock).
+The example is accessable via [Power of Emojis](https://github.com/PowerOfEmojis/EmojiClock).
 
 ## Installation
 
