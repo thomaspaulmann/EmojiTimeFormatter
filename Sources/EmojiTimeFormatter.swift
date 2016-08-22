@@ -22,7 +22,7 @@ public class EmojiTimeFormatter: Formatter {
             return nil
         }
 
-        return string(from: date)
+        return clockFace(from: date).rawValue
     }
 
     public override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?,
@@ -41,7 +41,7 @@ public class EmojiTimeFormatter: Formatter {
 
     // MARK: - Typesafety first
 
-    public func string(from date: Date) -> String {
+    public func clockFace(from date: Date) -> ClockFaceEmoji {
         // Extract hours and minutes.
         let hours = Double(calendar.component(.hour, from: date))
         let minutes = Double(calendar.component(.minute, from: date)) / 60.0
@@ -55,59 +55,59 @@ public class EmojiTimeFormatter: Formatter {
 
     // MARK: - Private
 
-    private func string(for time: Double) -> String {
+    private func string(for time: Double) -> ClockFaceEmoji {
         let limitedTime = limit(time: time)
 
         if limitedTime < 1.25 {
-            return ClockFaceEmoji.twelve.rawValue
+            return ClockFaceEmoji.twelve
         } else if limitedTime < 1.75 {
-            return ClockFaceEmoji.twelveThirty.rawValue
+            return ClockFaceEmoji.twelveThirty
         } else if limitedTime < 2.25 {
-            return ClockFaceEmoji.one.rawValue
+            return ClockFaceEmoji.one
         } else if limitedTime < 2.75 {
-            return ClockFaceEmoji.oneThirty.rawValue
+            return ClockFaceEmoji.oneThirty
         } else if limitedTime < 3.25 {
-            return ClockFaceEmoji.two.rawValue
+            return ClockFaceEmoji.two
         } else if limitedTime < 3.75 {
-            return ClockFaceEmoji.twoThirty.rawValue
+            return ClockFaceEmoji.twoThirty
         } else if limitedTime < 4.25 {
-            return ClockFaceEmoji.three.rawValue
+            return ClockFaceEmoji.three
         } else if limitedTime < 4.75 {
-            return ClockFaceEmoji.threeThirty.rawValue
+            return ClockFaceEmoji.threeThirty
         } else if limitedTime < 5.25 {
-            return ClockFaceEmoji.four.rawValue
+            return ClockFaceEmoji.four
         } else if limitedTime < 5.75 {
-            return ClockFaceEmoji.fourThirty.rawValue
+            return ClockFaceEmoji.fourThirty
         } else if limitedTime < 6.25 {
-            return ClockFaceEmoji.five.rawValue
+            return ClockFaceEmoji.five
         } else if limitedTime < 6.75 {
-            return ClockFaceEmoji.fiveThirty.rawValue
+            return ClockFaceEmoji.fiveThirty
         } else if limitedTime < 7.25 {
-            return ClockFaceEmoji.six.rawValue
+            return ClockFaceEmoji.six
         } else if limitedTime < 7.75 {
-            return ClockFaceEmoji.sixThirty.rawValue
+            return ClockFaceEmoji.sixThirty
         } else if limitedTime < 8.25 {
-            return ClockFaceEmoji.seven.rawValue
+            return ClockFaceEmoji.seven
         } else if limitedTime < 8.75 {
-            return ClockFaceEmoji.sevenThirty.rawValue
+            return ClockFaceEmoji.sevenThirty
         } else if limitedTime < 9.25 {
-            return ClockFaceEmoji.eight.rawValue
+            return ClockFaceEmoji.eight
         } else if limitedTime < 9.75 {
-            return ClockFaceEmoji.eightThirty.rawValue
+            return ClockFaceEmoji.eightThirty
         } else if limitedTime < 10.25 {
-            return ClockFaceEmoji.nine.rawValue
+            return ClockFaceEmoji.nine
         } else if limitedTime < 10.75 {
-            return ClockFaceEmoji.nineThirty.rawValue
+            return ClockFaceEmoji.nineThirty
         } else if limitedTime < 11.25 {
-            return ClockFaceEmoji.ten.rawValue
+            return ClockFaceEmoji.ten
         } else if limitedTime < 11.75 {
-            return ClockFaceEmoji.tenThirty.rawValue
+            return ClockFaceEmoji.tenThirty
         } else if limitedTime < 12.25 {
-            return ClockFaceEmoji.eleven.rawValue
+            return ClockFaceEmoji.eleven
         } else if limitedTime < 12.75 {
-            return ClockFaceEmoji.elevenThirty.rawValue
+            return ClockFaceEmoji.elevenThirty
         } else  {
-            return ClockFaceEmoji.twelve.rawValue
+            return ClockFaceEmoji.twelve
         }
     }
 

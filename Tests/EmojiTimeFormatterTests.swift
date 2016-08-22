@@ -34,23 +34,20 @@ class EmojiTimeFormatterTests: XCTestCase {
     func testTwentyFourHours() {
         var minutes = Date(timeIntervalSince1970: 0)
 
-        XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelve.rawValue,
-                  "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+        XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twelve)
 
         // 12 AM
 
         for _ in 0..<14 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelve.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twelve)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelveThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twelveThirty)
         }
 
         // 1 AM
@@ -58,15 +55,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.one.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.one)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.oneThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.oneThirty)
         }
 
         // 2 AM
@@ -74,15 +69,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.two.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.two)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twoThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twoThirty)
         }
 
         // 3 AM
@@ -90,15 +83,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.three.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.three)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.threeThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.threeThirty)
         }
 
         // 4 AM
@@ -106,15 +97,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.four.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.four)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.fourThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.fourThirty)
         }
 
         // 5 AM
@@ -122,15 +111,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.five.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.five)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.fiveThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.fiveThirty)
         }
 
         // 6 AM
@@ -138,15 +125,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.six.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.six)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.sixThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.sixThirty)
         }
 
         // 7 AM
@@ -154,15 +139,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.seven.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.seven)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.sevenThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.sevenThirty)
         }
 
         // 8 AM
@@ -170,15 +153,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.eight.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.eight)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.eightThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.eightThirty)
         }
 
         // 9 AM
@@ -186,15 +167,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.nine.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.nine)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.nineThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.nineThirty)
         }
 
         // 10 AM
@@ -202,15 +181,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.ten.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.ten)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.tenThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.tenThirty)
         }
 
         // 11 AM
@@ -218,15 +195,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.eleven.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.eleven)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.elevenThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.elevenThirty)
         }
 
         // 12 PM
@@ -234,15 +209,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelve.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twelve)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelveThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twelveThirty)
         }
 
         // 1 PM
@@ -250,15 +223,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(for: minutes) == ClockFaceEmoji.one.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.one)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.oneThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.oneThirty)
         }
 
         // 2 PM
@@ -266,15 +237,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.two.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.two)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twoThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twoThirty)
         }
 
         // 3 PM
@@ -282,15 +251,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.three.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.three)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.threeThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.threeThirty)
         }
 
         // 4 PM
@@ -298,15 +265,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.four.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.four)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.fourThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.fourThirty)
         }
 
         // 5 PM
@@ -314,15 +279,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.five.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.five)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.fiveThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.fiveThirty)
         }
 
         // 6 PM
@@ -330,15 +293,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.six.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.six)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.sixThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.sixThirty)
         }
 
         // 7 PM
@@ -346,15 +307,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.seven.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.seven)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.sevenThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.sevenThirty)
         }
 
         // 8 PM
@@ -362,15 +321,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.eight.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.eight)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.eightThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.eightThirty)
         }
 
         // 9 PM
@@ -378,15 +335,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.nine.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.nine)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.nineThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.nineThirty)
         }
 
         // 10 PM
@@ -394,15 +349,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.ten.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.ten)
         }
 
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
 
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.tenThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.tenThirty)
         }
         
         // 11 PM
@@ -410,15 +363,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
             
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.eleven.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.eleven)
         }
         
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
             
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.elevenThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.elevenThirty)
         }
         
         // 12 AM
@@ -426,15 +377,13 @@ class EmojiTimeFormatterTests: XCTestCase {
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
             
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelve.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twelve)
         }
         
         for _ in 0..<30 {
             minutes.addTimeInterval(minute)
             
-            XCTAssert(formatter.string(from: minutes) == ClockFaceEmoji.twelveThirty.rawValue,
-                      "\(formatter.string(from: minutes)) is not correct for \(minutes)")
+            XCTAssert(formatter.clockFace(from: minutes) == ClockFaceEmoji.twelveThirty)
         }
     }
 
