@@ -6,6 +6,3 @@ xcode_sdk: iphonesimulator10.0
 
 script:
         - xcodebuild -project EmojiTimeFormatter.xcodeproj -scheme EmojiTimeFormatter -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' clean test
-
-notifications:
-          email: false
