@@ -8,7 +8,7 @@ EmojiTimeFormatter supports multiple methods for installing the library in a pro
 
 ### Installation with Swift Package Manager 
 
-To integrate EmojiTimeFormatter into your project using [Swift Package Manager](https://swift.org/package-manager/), specify it in your `Package.swift` file:
+To integrate EmojiTimeFormatter into your Xcode project using [Swift Package Manager](https://swift.org/package-manager/), specify it in your `Package.swift` file:
 
 ``` Swift
 import PackageDescription
@@ -30,6 +30,10 @@ github "thomaspaulmann/EmojiTimeFormatter" ~> X.Y.Z
 ```
 
 Run carthage to build the framework and drag the built EmojiTimeFormatter.framework into your Xcode project.
+
+### Installation without anything
+
+To integrate EmojiTimeFormatter into your Xcode project using nothing but your hands, copy the [Sources](/Sources) folder to your Xcode project. It's only two files and 200 lines of code.
 
 ## Usage
 
