@@ -8,15 +8,15 @@
 
 import Foundation
 
-public class EmojiTimeFormatter: Formatter {
+open class EmojiTimeFormatter: Formatter {
 
     // MARK: - Properties
 
-    private let calendar = Calendar.current
+    fileprivate let calendar = Calendar.current
 
     // MARK: - Formatter
 
-    public override func string(for object: Any?) -> String? {
+    open override func string(for object: Any?) -> String? {
         // If object is not a date, do nothing.
         guard let date = object as? Date else {
             return nil
@@ -25,7 +25,7 @@ public class EmojiTimeFormatter: Formatter {
         return clockFace(from: date).rawValue
     }
 
-    public override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?,
+    open override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?,
                                         for string: String,
                                         errorDescription error: AutoreleasingUnsafeMutablePointer<NSString?>?) -> Bool {
         // If argument is not a clock face emoji, set error message and return false.
@@ -41,7 +41,7 @@ public class EmojiTimeFormatter: Formatter {
 
     // MARK: - Typesafety first
 
-    public func clockFace(from date: Date) -> ClockFaceEmoji {
+    open func clockFace(from date: Date) -> ClockFaceEmoji {
         // Extract hours and minutes.
         let hours = Double(calendar.component(.hour, from: date))
         let minutes = Double(calendar.component(.minute, from: date)) / 60.0
@@ -49,13 +49,13 @@ public class EmojiTimeFormatter: Formatter {
         return string(for: hours + minutes)
     }
 
-    public func date(from emoji: ClockFaceEmoji) -> Date {
+    open func date(from emoji: ClockFaceEmoji) -> Date {
         return date(for: emoji)
     }
 
     // MARK: - Private
 
-    private func string(for time: Double) -> ClockFaceEmoji {
+    fileprivate func string(for time: Double) -> ClockFaceEmoji {
         let limitedTime = limit(time)
 
         if limitedTime < 1.25 {
@@ -111,7 +111,7 @@ public class EmojiTimeFormatter: Formatter {
         }
     }
 
-    private func date(for emoji: ClockFaceEmoji) -> Date {
+    fileprivate func date(for emoji: ClockFaceEmoji) -> Date {
         let halfHour = TimeInterval(1800) // in seconds
 
         switch emoji {
@@ -166,7 +166,7 @@ public class EmojiTimeFormatter: Formatter {
         }
     }
 
-    private func limit(_ time: Double) -> Double {
+    fileprivate func limit(_ time: Double) -> Double {
         if time < 1 {
             // Midnight
             return time + 12
