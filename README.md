@@ -21,6 +21,20 @@ let package = Package(
 )
 ```
 
+### Installation with CocoaPods
+
+To integrate EmojiTimeFormatter into your Xcode project using [CocoaPods](https://cocoapods.org), specify it in your `Podfile`:
+
+```
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+target 'TargetName' do
+    pod 'EmojiTimeFormatter', '~> X.Y.Z'
+end
+```
+Then, run the `pod install`and enjoy your new framework.
+
 ### Installation with Carthage
 
 To integrate EmojiTimeFormatter into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your `Cartfile`:
@@ -29,7 +43,7 @@ To integrate EmojiTimeFormatter into your Xcode project using [Carthage](https:/
 github "thomaspaulmann/EmojiTimeFormatter" ~> X.Y.Z
 ```
 
-Run carthage to build the framework and drag the built EmojiTimeFormatter.framework into your Xcode project.
+Run `carthage` to build the framework and drag the built EmojiTimeFormatter.framework into your Xcode project.
 
 ### Installation without anything
 
