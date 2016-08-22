@@ -34,7 +34,7 @@ public class EmojiTimeFormatter: Formatter {
             return false
         }
 
-        obj?.pointee = date(for: clockFaceEmoji)
+        obj?.pointee = date(from: clockFaceEmoji)
 
         return true
     }
