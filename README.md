@@ -64,7 +64,7 @@ let now = Date()
 let formatter = EmojiTimeFormatter()
 let clockFaceEmoji = formatter.clockFace(from: now)
 
-print("It's \(clockFaceEmoji) o'clock.")
+print("It's \(clockFaceEmoji) o'clock.") // Output: It's 🕢 o'clock.
 ```
 
 ### Emoji to Date
@@ -76,7 +76,7 @@ let twelveThirty = ClockFaceEmoji.twelveThirty
 let formatter = EmojiTimeFormatter()
 let date = formatter.date(from: twelveThirty)
 
-print("It's \(date).")
+print("It's \(date).") // Output: It's 1970-01-01 00:30:00 +0000.
 ```
 
 Note: Actually it's not a date, it's a time relative to 00:00:00 UTC on 1 January 1970.
