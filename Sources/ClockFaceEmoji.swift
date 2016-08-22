@@ -6,7 +6,7 @@
 //  Copyright © 2016 Thomas Paul Mann. All rights reserved.
 //
 
-enum ClockFaceEmoji: String {
+public enum ClockFaceEmoji: String {
 
     // Whole
 
