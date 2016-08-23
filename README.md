@@ -1,3 +1,8 @@
+[![Swift](https://img.shields.io/badge/Swift-3.0-green.svg)](https://swift.org) 
+[![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-blue.svg?style=flat)](https://swift.org/package-manager/)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-red.svg?style=flat)](https://cocoapods.org)
+
 # EmojiTimeFormatter
 
 Format your dates/times as emojis 🕟 🕑 🕗
