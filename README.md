@@ -47,9 +47,10 @@ target 'TargetName' do
     pod 'EmojiTimeFormatter', '~> X.Y.Z'
 end
 ```
+
 Then, run the `pod install`and enjoy your new framework.
 
-### Installation with Carthage (WIP)
+### Installation with Carthage
 
 To integrate EmojiTimeFormatter into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your `Cartfile`:
 
@@ -57,7 +58,7 @@ To integrate EmojiTimeFormatter into your Xcode project using [Carthage](https:/
 github "thomaspaulmann/EmojiTimeFormatter" ~> X.Y.Z
 ```
 
-Run `carthage` to build the framework and drag the built EmojiTimeFormatter.framework into your Xcode project.
+Run `carthage update --toolchain com.apple.dt.toolchain.XcodeDefault` to build the framework and drag the built EmojiTimeFormatter.framework into your Xcode project. It's important to specify your [toolchain in the Xcode beta builds](https://github.com/Carthage/Carthage/issues/1417).
 
 ## Usage
 
