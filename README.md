@@ -51,6 +51,14 @@ platform :ios, '8.0'
 target 'TargetName' do
     pod 'EmojiTimeFormatter', '~> X.Y.Z'
 end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
 ```
 
 Then, run the `pod install`and enjoy your new framework.
