@@ -61,7 +61,7 @@ post_install do |installer|
 end
 ```
 
-Then, run the `pod install`and enjoy your new framework.
+Then, run the `pod install` and enjoy your new framework.
 
 ### Installation with Carthage
 
