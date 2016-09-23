@@ -19,11 +19,7 @@ The example is accessable via [Power of Emojis](https://github.com/PowerOfEmojis
 
 EmojiTimeFormatter supports multiple methods for installing the library in a project. You can find the latest version in the [release tab](https://github.com/thomaspaulmann/EmojiTimeFormatter/releases/latest). 
 
-**There are some troubles with distributing frameworks that are written in Swift 2.3/3.0. The easiest way to use EmojiTimeFormatter is copying the [Sources](/Sources) to your project.**
-
-### Installation without anything
-
-To integrate EmojiTimeFormatter into your Xcode project using nothing but your hands, copy the [Sources](/Sources) folder to your Xcode project. It's only two files and 200 lines of code.
+**There are some troubles with distributing frameworks that are written in Swift 2.3/3.0. The easiest way to use EmojiTimeFormatter is to use SPM which is already included in Xcode 8.**
 
 ### Installation with Swift Package Manager 
 
@@ -72,6 +68,10 @@ github "thomaspaulmann/EmojiTimeFormatter" ~> X.Y.Z
 ```
 
 Run `carthage update --toolchain com.apple.dt.toolchain.XcodeDefault` to build the framework and drag the built EmojiTimeFormatter.framework into your Xcode project. It's important to specify your [toolchain in the Xcode beta builds](https://github.com/Carthage/Carthage/issues/1417).
+
+### Installation without anything
+
+To integrate EmojiTimeFormatter into your Xcode project using nothing but your hands, copy the [Sources](/Sources) folder to your Xcode project. It's only two files and 200 lines of code.
 
 ## Usage
 
