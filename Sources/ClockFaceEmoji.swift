@@ -6,6 +6,8 @@
 //  Copyright © 2016 Thomas Paul Mann. All rights reserved.
 //
 
+import Foundation
+
 public enum ClockFaceEmoji: String {
 
     // Whole
@@ -37,6 +39,40 @@ public enum ClockFaceEmoji: String {
     case tenThirty = "🕥"
     case elevenThirty = "🕦"
     case twelveThirty = "🕧"
+
+}
+
+extension ClockFaceEmoji {
+
+    static var all: [ClockFaceEmoji] {
+        return [
+            .twelve,
+            .twelveThirty,
+            .one,
+            .oneThirty,
+            .two,
+            .twoThirty,
+            .three,
+            .threeThirty,
+            .four,
+            .fourThirty,
+            .five,
+            .fiveThirty,
+            .six,
+            .sixThirty,
+            .seven,
+            .sevenThirty,
+            .eight,
+            .eightThirty,
+            .nine,
+            .nineThirty,
+            .ten,
+            .tenThirty,
+            .eleven,
+            .elevenThirty
+
+        ]
+    }
 
 }
 
