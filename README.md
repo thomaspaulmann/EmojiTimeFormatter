@@ -1,7 +1,6 @@
-[![Swift](https://img.shields.io/badge/Swift-3.0-green.svg)](https://swift.org) 
+[![Swift](https://img.shields.io/badge/Swift-3.0-green.svg)](https://swift.org)
 [![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-blue.svg?style=flat)](https://swift.org/package-manager/)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-red.svg?style=flat)](https://cocoapods.org)
 
 # EmojiTimeFormatter
 
@@ -17,9 +16,9 @@ The example is accessable via [Power of Emojis](https://github.com/PowerOfEmojis
 
 ## Installation
 
-EmojiTimeFormatter supports multiple methods for installing the library in a project. You can find the latest version in the [release tab](https://github.com/thomaspaulmann/EmojiTimeFormatter/releases/latest). 
+EmojiTimeFormatter supports multiple methods for installing the library in a project. You can find the latest version in the [release tab](https://github.com/thomaspaulmann/EmojiTimeFormatter/releases/latest).
 
-### Installation with Swift Package Manager 
+### Installation with Swift Package Manager
 
 To integrate EmojiTimeFormatter into your Xcode project using [Swift Package Manager](https://swift.org/package-manager/), specify it in your `Package.swift` file:
 
@@ -33,29 +32,6 @@ let package = Package(
     ]
 )
 ```
-
-### Installation with CocoaPods (WIP)
-
-To integrate EmojiTimeFormatter into your Xcode project using [CocoaPods](https://cocoapods.org), specify it in your `Podfile`:
-
-```
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-
-target 'TargetName' do
-    pod 'EmojiTimeFormatter', '~> X.Y.Z'
-end
-
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['SWIFT_VERSION'] = '3.0'
-    end
-  end
-end
-```
-
-Then, run the `pod install` and enjoy your new framework.
 
 ### Installation with Carthage
 
